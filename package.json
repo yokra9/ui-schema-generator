@@ -1,0 +1,17 @@
+{
+  "name": "ui-schema-generator",
+  "version": "1.0.0",
+  "description": "generate uiSchema for vue-form-json-schema",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yokra9",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.0"
+  }
+}
