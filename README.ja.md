@@ -2,13 +2,14 @@
 
 [![Build Status](https://travis-ci.com/yokra9/ui-schema-generator.svg?branch=master)](https://travis-ci.com/yokra9/ui-schema-generator)
 
-This is a helper library to use [Vue Form JSON Schema](https://github.com/jarvelov/vue-form-json-schema) . By specifying the model name as array, uiSchema can be generated collectively.
+[Vue Form JSON Schema](https://github.com/jarvelov/vue-form-json-schema) を利用する際、uiSchema 定義を手助けするライブラリです。モデル名を配列で指定することで、uiSchema をまとめて生成することができます。
 
-## interface
+## インターフェース
 
+GitHub Pages を参照
 https://yokra9.github.io/ui-schema-generator/UiSchemaGenerator.html
 
-## example
+## 利用例
 
 ```vue
 <template>
@@ -40,37 +41,37 @@ export default {
       model: {},
       schema: Schema,
       uiSchema: new generator(Schema)
-        // set Default Data Object
+        // データオブジェクトのデフォルト値をセット
         .setDefaultFieldOptions({
           attrs: {
             outlined: true,
-            // can set functionional value
+            // 値として function(model) を取ることもできる。
             label: model => model,
             hint: model => Schema.properties[model].description
           },
           class: "mt-5"
         })
-        // set Default Error Options
+        // エラーオプションのデフォルト値をセット
         .setDefaultErrorOptions({
           attrs: {
             error: true
           }
         })
-        // generate uiSchema
+        // uiSchema を生成
         .generate(
-          "div", // HTML tag or Vue Component
-          undefined, // model assosiated with componets 
-          // Data Object
+          "div", // HTML タグ名
+          undefined, // 要素と紐付けるモデル。未定義の場合は紐付けない
+          // データオブジェクト
           {
             style: { backgroundColor: "#043c78", color: "white" },
             class: "pl-1"
           },
-          // can nest generator
+          // 子要素。UiSchemaGenerator のネストも可能
           new generator(Schema)
             .generate("h1", [], { domProps: { innerHTML: "見出し" } })
             .toArray()
         )
-        // can also be generated collectively
+        // 同じような uiSchema はまとめて生成することも可能
         .generate("v-text-field", ["firstName","familyName","address","country"], {
           on: "input",
           attrs: {
