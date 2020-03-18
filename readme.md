@@ -67,7 +67,7 @@ export default {
           },
           // can nest generator
           new generator(Schema)
-            .generate("h1", [], { domProps: { innerHTML: "見出し" } })
+            .generate("h1", [], { domProps: { innerHTML: "HEADER" } })
             .toArray()
         )
         // can also be generated collectively
