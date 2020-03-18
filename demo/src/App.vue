@@ -1,17 +1,3 @@
-# ui-schema-generator
-
-[![Build Status](https://travis-ci.com/yokra9/ui-schema-generator.svg?branch=master)](https://travis-ci.com/yokra9/ui-schema-generator)
-
-[Vue Form JSON Schema](https://github.com/jarvelov/vue-form-json-schema) を利用する際、uiSchema 定義を手助けするライブラリです。モデル名を配列で指定することで、uiSchema をまとめて生成することができます。
-
-## インターフェース
-
-GitHub Pages を参照
-https://yokra9.github.io/ui-schema-generator/UiSchemaGenerator.html
-
-## 利用例
-
-```vue
 <template>
   <v-app>
     <v-container>
@@ -84,4 +70,3 @@ export default {
   }
 };
 </script>
-```

@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema",
+    "$ref": "#/definitions/Schema",
+    "definitions": {
+        "Schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$schema": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string",
+                    "description": "Your First Name"
+                },
+                "familyName": {
+                    "type": "string",
+                    "description": "Your Family Name"
+                },
+                "address": {
+                    "type": "string",
+                    "description": "Your Address"
+                },
+                "country": {
+                    "type": "string",
+                    "description": "Your Country"
+                }
+            }
+        }
+    }
+}
