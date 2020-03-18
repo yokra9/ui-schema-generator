@@ -2,8 +2,10 @@ const should = require('chai').should()
 
 import generator from "../lib/"
 import {
-    schema, fieldOptions, style, children, displayOptions, errorHandler, errorOptions, mergedErrorOptions
+    jsonSchema, fieldOptions, style, children, displayOptions, errorHandler, errorOptions, mergedErrorOptions
 } from "./resource"
+
+const schema = jsonSchema.definitions.Schema
 
 describe("UiSchemaGenerator", () => {
 

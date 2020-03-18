@@ -1,6 +1,6 @@
 import _ from "lodash"
 
-exports.schema = {
+exports.jsonSchema = {
     "$schema": "http://json-schema.org/draft-06/schema",
     "$ref": "#/definitions/Schema",
     "definitions": {
