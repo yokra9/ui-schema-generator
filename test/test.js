@@ -186,7 +186,8 @@ describe("UiSchemaGenerator", () => {
 
         it("should be an uiSchema", () => {
             new generator(schema)
-                .generate("div", undefined, fieldOptions, children, displayOptions, errorOptions, errorHandler).toArray().should.to.eql([
+                .generate("div", undefined, fieldOptions, children, displayOptions, errorOptions, errorHandler)
+                .toArray().should.to.eql([
                     {
                         component: "div",
                         fieldOptions,

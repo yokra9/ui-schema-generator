@@ -55,7 +55,7 @@ export default {
           },
           // 子要素。UiSchemaGenerator のネストも可能
           new generator(Schema)
-            .generate("h1", [], { domProps: { innerHTML: "見出し" } })
+            .generate("h1", [], { domProps: { innerHTML: "Header" } })
             .toArray()
         )
         // 同じような uiSchema はまとめて生成することも可能
