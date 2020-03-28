@@ -23,7 +23,8 @@
                 },
                 "country": {
                     "type": "string",
-                    "description": "Your Country"
+                    "description": "Your Country",
+                    "enum": ["JP","SE"]
                 }
             }
         }

@@ -1,7 +1,12 @@
 <template>
   <v-app>
     <v-container>
-      <vue-form-json-schema v-model="model" :schema="schema" :ui-schema="uiSchema" />
+      <vue-form-json-schema
+        v-model="model"
+        :schema="schema"
+        :ui-schema="uiSchema"
+        :options="options"
+      />
     </v-container>
   </v-app>
 </template>
@@ -10,9 +15,9 @@
 import VueFormJsonSchema from "vue-form-json-schema";
 
 import "vuetify/dist/vuetify.min.css";
-import Vue from "vue"
-import vuetify from "vuetify"
-Vue.use(vuetify)
+import Vue from "vue";
+import vuetify from "vuetify";
+Vue.use(vuetify);
 
 import jsonSchema from "./schema.json";
 const Schema = jsonSchema.definitions.Schema;
@@ -26,6 +31,9 @@ export default {
   data() {
     return {
       model: {},
+      options: {
+        showValidationErrors: true
+      },
       schema: Schema,
       uiSchema: new generator(Schema)
         // データオブジェクトのデフォルト値をセット
@@ -59,12 +67,16 @@ export default {
             .toArray()
         )
         // 同じような uiSchema はまとめて生成することも可能
-        .generate("v-text-field", ["firstName","familyName","address","country"], {
-          on: "input",
-          attrs: {
-            clearable: true
+        .generate(
+          "v-text-field",
+          ["firstName", "familyName", "address", "country"],
+          {
+            on: "input",
+            attrs: {
+              clearable: true
+            }
           }
-        })
+        )
         .toArray()
     };
   }
