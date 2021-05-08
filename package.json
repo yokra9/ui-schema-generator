@@ -12,17 +12,17 @@
   "author": "yokra9",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/polyfill": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/register": "^7.8.6",
+    "@babel/core": "^7.9.0",
+    "@babel/polyfill": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
     "babel-plugin-espower": "^3.0.1",
-    "chai": "^4.2.0",
-    "jsdoc": "^3.6.3",
-    "mocha": "^7.1.0",
+    "chai": "^4.3.0",
+    "jsdoc": "^3.6.6",
+    "mocha": "^8.4.0",
     "nyc": "^15.0.0"
   }
 }
