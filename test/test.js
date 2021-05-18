@@ -135,18 +135,31 @@ describe("UiSchemaGenerator", () => {
                 ])
         })
 
-        // 正常系 : デフォルト値が反映されていることを確認する
-        it("should generate uiSchema with models and merged options", () => {
+        // 正常系 : オプションで関数が指定されていても動作する
+        it("should work with functional options", () => {
             new generator(schema)
                 .setDefaultFieldOptions({ style })
                 .setDefaultErrorOptions({ style })
-                .generate("div", ["model1", "model2"], { attrs: { label: model => model } }, children, displayOptions, errorOptions, errorHandler)
+                .generate("div", null, { attrs: { label: (model,index) => index + ":" + model } }, children, displayOptions, errorOptions, errorHandler)
+                .generate("div", ["model1", "model2"], { attrs: { label: (model,index) => index + ":" + model } }, children, displayOptions, errorOptions, errorHandler)
+                .generate("div", ["model3"], { attrs: { label: (model,index) => index + ":" + model } }, children, displayOptions, errorOptions, errorHandler)
                 .should.have.deep.property("uiSchema", [
+                    {
+                        component: "div",
+                        fieldOptions: {
+                            attrs: { label: "0:null" },
+                            style
+                        },
+                        children,
+                        displayOptions,
+                        errorHandler,
+                        errorOptions: mergedErrorOptions
+                    },
                     {
                         component: "div",
                         model: "model1",
                         fieldOptions: {
-                            attrs: { label: "model1" },
+                            attrs: { label: "1:model1" },
                             style
                         },
                         children,
@@ -157,7 +170,18 @@ describe("UiSchemaGenerator", () => {
                         component: "div",
                         model: "model2",
                         fieldOptions: {
-                            attrs: { label: "model2" },
+                            attrs: { label: "2:model2" },
+                            style
+                        },
+                        children,
+                        displayOptions,
+                        errorHandler,
+                        errorOptions: mergedErrorOptions
+                    }, {
+                        component: "div",
+                        model: "model3",
+                        fieldOptions: {
+                            attrs: { label: "3:model3" },
                             style
                         },
                         children,
