@@ -33,11 +33,14 @@ Vue.use(vuetify)
 
 export default {
   components: {
-    VueFormJsonSchema
+    VueFormJsonSchema,
   },
   data() {
     return {
       model: {},
+      options: {
+        showValidationErrors: true,
+      },
       schema: Schema,
       uiSchema: new generator(Schema)
         // set Default Data Object
@@ -45,41 +48,76 @@ export default {
           attrs: {
             outlined: true,
             // can set functionional value
-            label: model => model,
-            hint: model => Schema.properties[model].description
+            label: (model) => model || "",
+            hint: (model) =>
+              model ? Schema.properties[model].description : "",
           },
-          class: "mt-5"
+          class: "mt-5",
         })
         // set Default Error Options
         .setDefaultErrorOptions({
           attrs: {
-            error: true
-          }
+            error: true,
+          },
         })
         // generate uiSchema
         .generate(
           "div", // HTML tag or Vue Component
-          undefined, // model assosiated with componets 
+          null, // model assosiated with componets 
           // Data Object
           {
             style: { backgroundColor: "#043c78", color: "white" },
-            class: "pl-1"
+            class: "pl-1",
           },
           // can nest generator
           new generator(Schema)
-            .generate("h1", [], { domProps: { innerHTML: "HEADER" } })
+            .generate("h1", [], { domProps: { innerHTML: "Header" } })
             .toArray()
         )
         // can also be generated collectively
-        .generate("v-text-field", ["firstName","familyName","address","country"], {
-          on: "input",
-          attrs: {
-            clearable: true
+        .generate(
+          "v-text-field",
+          ["firstName", "familyName", "address", "country"],
+          {
+            on: "input",
+            attrs: {
+              clearable: true,
+            },
           }
+        )
+        // set Enum for items
+        .generate("v-select", ["country"], {
+          on: "change",
+          attrs: {
+            items: Schema.properties.country.enum,
+          },
         })
-        .toArray()
+        // group component
+        .generate(
+          "v-radio-group",
+          ["country"],
+          {
+            on: "change",
+          },
+          // child elements of group component
+          new generator(Schema)
+            .setDefaultFieldOptions({
+              attrs: {
+                // index stores the number of elements from the top of the uiSchema
+                label: (_model, index) =>
+                  Schema.properties["country"].enum[index],
+                value: (_model, index) =>
+                  Schema.properties["country"].enum[index],
+              },
+            })
+            .generate("v-radio", [])
+            .generate("v-radio", [])
+            .toArray()
+        )
+        .toArray(),
     };
-  }
+  },
 };
-</script>
 ```
+
+see also: `/demo/`
