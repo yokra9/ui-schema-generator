@@ -1,6 +1,7 @@
 # ui-schema-generator
 
-[![Build Status](https://travis-ci.com/yokra9/ui-schema-generator.svg?branch=master)](https://travis-ci.com/yokra9/ui-schema-generator) [![npm version](https://badge.fury.io/js/ui-schema-generator.svg)](https://badge.fury.io/js/ui-schema-generator)
+[![Github Actions](https://github.com/yokra9/ui-schema-generator/actions/workflows/node.js.yml/badge.svg)](https://github.com/yokra9/ui-schema-generator/actions/workflows/node.js.yml)
+[![npm version](https://badge.fury.io/js/ui-schema-generator.svg)](https://badge.fury.io/js/ui-schema-generator)
 
 [Vue Form JSON Schema](https://github.com/jarvelov/vue-form-json-schema) を利用する際、uiSchema 定義を手助けするライブラリです。モデル名を配列で指定することで、uiSchema をまとめて生成することができます。
 
