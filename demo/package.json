@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.20.3",
-    "ui-schema-generator": "^1.0.9",
+    "ui-schema-generator": "^1.0.10",
     "vue": "^2.6.14",
     "vue-form-json-schema": "^2.9.4",
     "vuetify": "^2.6.3"
