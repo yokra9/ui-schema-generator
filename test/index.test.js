@@ -1,5 +1,3 @@
-const should = require("chai").should();
-
 import generator from "../lib/";
 import {
   jsonSchema,
@@ -19,62 +17,58 @@ describe("UiSchemaGenerator", () => {
     // 正常系
     it("should be an instance of generator", () => {
       // インスタンスの生成を確認
-      new generator(schema).should.be.an.instanceof(generator);
+      expect(new generator(schema)).toBeInstanceOf(generator);
     });
 
     // 変なオプションを与えたとき
     it("shold not work with invalid schema", () => {
       // エラー吐いてほしい
-      (() => {
+      expect(() => {
         new generator();
-      }).should.to.throw(TypeError);
+      }).toThrowError(TypeError);
     });
   });
 
   describe("setDefaultFieldOptions", () => {
     // 正常系
     it("should be set property", () => {
-      new generator(schema)
-        .setDefaultFieldOptions(fieldOptions)
-        .should.have.deep.property("fieldOptions", fieldOptions);
+      expect(new generator(schema)
+        .setDefaultFieldOptions(fieldOptions)).toHaveProperty("fieldOptions", fieldOptions);
     });
 
     // チェーンメソッドであることを確認する
     it("should return instance", () => {
-      new generator(schema)
-        .setDefaultFieldOptions(fieldOptions)
-        .should.be.instanceof(generator);
+      expect(new generator(schema)
+        .setDefaultFieldOptions(fieldOptions)).toBeInstanceOf(generator);
     });
   });
 
   describe("setDefaultErrorOptions", () => {
     // 正常系
     it("should be set property", () => {
-      new generator(schema)
-        .setDefaultErrorOptions(errorOptions)
-        .should.have.deep.property("errorOptions", errorOptions);
+      expect(new generator(schema)
+        .setDefaultErrorOptions(errorOptions)).toHaveProperty("errorOptions", errorOptions);
     });
 
     // チェーンメソッドであることを確認する
     it("should return instance", () => {
-      new generator(schema)
-        .setDefaultErrorOptions(errorOptions)
-        .should.be.instanceof(generator);
+      expect(new generator(schema)
+        .setDefaultErrorOptions(errorOptions)).toBeInstanceOf(generator);
     });
   });
 
   describe("generate", () => {
     // 引数 component は必須
     it("should not work without component", () => {
-      (() => {
+      expect(() => {
         new generator(schema).generate();
-      }).should.to.throw(TypeError);
+      }).toThrowError(TypeError);
     });
 
     // 正常系 : models が未定義でも動く
     new Array(null, undefined, []).forEach((model) => {
       it("should generate uiSchema with " + JSON.stringify(model), () => {
-        new generator(schema)
+        expect(new generator(schema)
           .generate(
             "div",
             model,
@@ -83,8 +77,7 @@ describe("UiSchemaGenerator", () => {
             displayOptions,
             errorOptions,
             errorHandler
-          )
-          .should.have.deep.property("uiSchema", [
+          )).toHaveProperty("uiSchema", [
             {
               component: "div",
               fieldOptions,
@@ -99,7 +92,7 @@ describe("UiSchemaGenerator", () => {
 
     // 正常系 : デフォルト値が反映されていることを確認する
     it("should generate uiSchema with merged options", () => {
-      new generator(schema)
+      expect(new generator(schema)
         .setDefaultFieldOptions({ style })
         .setDefaultErrorOptions({ style })
         .generate(
@@ -110,8 +103,7 @@ describe("UiSchemaGenerator", () => {
           displayOptions,
           errorOptions,
           errorHandler
-        )
-        .should.have.deep.property("uiSchema", [
+        )).toHaveProperty("uiSchema", [
           {
             component: "div",
             fieldOptions: {
@@ -128,7 +120,7 @@ describe("UiSchemaGenerator", () => {
 
     // 正常系 : models があっても動く
     it("should generate uiSchema with models", () => {
-      new generator(schema)
+      expect(new generator(schema)
         .generate(
           "div",
           ["model1", "model2"],
@@ -137,8 +129,7 @@ describe("UiSchemaGenerator", () => {
           displayOptions,
           errorOptions,
           errorHandler
-        )
-        .should.have.deep.property("uiSchema", [
+        )).toHaveProperty("uiSchema", [
           {
             component: "div",
             model: "model1",
@@ -162,7 +153,7 @@ describe("UiSchemaGenerator", () => {
 
     // 正常系 : オプションで関数が指定されていても動作する
     it("should work with functional options", () => {
-      new generator(schema)
+      expect(new generator(schema)
         .setDefaultFieldOptions({ style })
         .setDefaultErrorOptions({ style })
         .generate(
@@ -191,8 +182,7 @@ describe("UiSchemaGenerator", () => {
           displayOptions,
           errorOptions,
           errorHandler
-        )
-        .should.have.deep.property("uiSchema", [
+        )).toHaveProperty("uiSchema", [
           {
             component: "div",
             fieldOptions: {
@@ -245,20 +235,19 @@ describe("UiSchemaGenerator", () => {
 
     // チェーンメソッドであることを確認する
     it("should return instance", () => {
-      new generator(schema)
-        .setDefaultErrorOptions({ class: "testing" })
-        .should.be.instanceof(generator);
+      expect(new generator(schema)
+        .setDefaultErrorOptions({ class: "testing" })).toBeInstanceOf(generator);
     });
   });
 
   describe("toArray", () => {
     // 正常系
     it("should be an array", () => {
-      new generator(schema).toArray().should.to.eql([]);
+      expect(new generator(schema).toArray()).toEqual([]);
     });
 
     it("should be an uiSchema", () => {
-      new generator(schema)
+      expect(new generator(schema)
         .generate(
           "div",
           undefined,
@@ -268,8 +257,7 @@ describe("UiSchemaGenerator", () => {
           errorOptions,
           errorHandler
         )
-        .toArray()
-        .should.to.eql([
+        .toArray()).toEqual([
           {
             component: "div",
             fieldOptions,

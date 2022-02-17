@@ -4,9 +4,7 @@
   "description": "generate uiSchema for vue-form-json-schema",
   "main": "lib/index.js",
   "scripts": {
-    "mocha": "mocha --require @babel/register --require @babel/polyfill",
-    "coverage": "nyc npm run mocha",
-    "test": "npm run coverage",
+    "test": "jest",
     "doc": "jsdoc -r lib -d docs/"
   },
   "author": "yokra9",
@@ -20,9 +18,7 @@
     "@babel/preset-env": "^7.14.2",
     "@babel/register": "^7.9.0",
     "babel-plugin-espower": "^3.0.1",
-    "chai": "^4.3.4",
-    "jsdoc": "^3.6.10",
-    "mocha": "^9.2.0",
-    "nyc": "^15.1.0"
+    "jest": "^27.5.1",
+    "jsdoc": "^3.6.10"
   }
 }
