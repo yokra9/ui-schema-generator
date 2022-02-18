@@ -13,10 +13,10 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.2",
+    "@babel/core": "^7.17.4",
     "@babel/polyfill": "^7.9.0",
-    "@babel/preset-env": "^7.14.2",
-    "@babel/register": "^7.9.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.0",
     "babel-plugin-espower": "^3.0.1",
     "jest": "^27.5.1",
     "jsdoc": "^3.6.10"
