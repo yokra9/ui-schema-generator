@@ -2,6 +2,7 @@
 
 [![Github Actions](https://github.com/yokra9/ui-schema-generator/actions/workflows/node.js.yml/badge.svg)](https://github.com/yokra9/ui-schema-generator/actions/workflows/node.js.yml)
 [![npm version](https://badge.fury.io/js/ui-schema-generator.svg)](https://badge.fury.io/js/ui-schema-generator)
+[![npm](https://img.shields.io/npm/dt/ui-schema-generator)](https://badge.fury.io/js/ui-schema-generator)
 
 This is a helper library to use [Vue Form JSON Schema](https://github.com/jarvelov/vue-form-json-schema) . By specifying the model name as array, uiSchema can be generated collectively.
 
