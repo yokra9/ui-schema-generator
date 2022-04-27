@@ -6,6 +6,10 @@
 
 This is a helper library to use [Vue Form JSON Schema](https://github.com/jarvelov/vue-form-json-schema) . By specifying the model name as array, uiSchema can be generated collectively.
 
+## demo
+
+<https://yokra9.github.io/ui-schema-generator/demo/>
+
 ## interface
 
 <https://yokra9.github.io/ui-schema-generator/UiSchemaGenerator.html>

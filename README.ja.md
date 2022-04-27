@@ -6,6 +6,10 @@
 
 [Vue Form JSON Schema](https://github.com/jarvelov/vue-form-json-schema) を利用する際、uiSchema 定義を手助けするライブラリです。モデル名を配列で指定することで、uiSchema をまとめて生成することができます。
 
+## デモ
+
+<https://yokra9.github.io/ui-schema-generator/demo/>
+
 ## インターフェース
 
 GitHub Pages を参照
