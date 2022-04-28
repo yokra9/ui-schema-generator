@@ -1,6 +1,6 @@
 # ui-schema-generator
 
-[![Github Actions](https://github.com/yokra9/ui-schema-generator/actions/workflows/node.js.yml/badge.svg)](https://github.com/yokra9/ui-schema-generator/actions/workflows/node.js.yml)
+[![Jest](https://github.com/yokra9/ui-schema-generator/actions/workflows/Jest.yml/badge.svg)](https://github.com/yokra9/ui-schema-generator/actions/workflows/Jest.yml)
 [![npm version](https://badge.fury.io/js/ui-schema-generator.svg)](https://badge.fury.io/js/ui-schema-generator)
 [![npm](https://img.shields.io/npm/dt/ui-schema-generator)](https://badge.fury.io/js/ui-schema-generator)
 
@@ -8,7 +8,7 @@
 
 ## デモ
 
-<https://yokra9.github.io/ui-schema-generator/demo/>
+<https://yokra9.github.io/ui-schema-generator/dist/>
 
 ## インターフェース
 

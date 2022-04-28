@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "copyfiles dist/** ../docs"
+    "deploy": "copyfiles dist/** ../docs && cd ../docs/dist"
   },
   "dependencies": {
     "core-js": "^3.22.2",
