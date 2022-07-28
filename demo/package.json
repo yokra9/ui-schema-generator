@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "copyfiles dist/** ../docs && cd ../docs/dist"
+    "deploy": "copyfiles dist/** ../docs && cd ../docs/dist",
+    "test": "cypress run --browser chrome --spec \"cypress/e2e/spec.cy.ts\""
   },
   "dependencies": {
     "core-js": "^3.24.0",
@@ -21,10 +22,12 @@
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
     "copyfiles": "^2.4.1",
+    "cypress": "^10.3.1",
     "eslint": "^8.20.0",
     "eslint-plugin-vue": "^8.7.1",
     "sass": "^1.54.0",
     "sass-loader": "^13.0.2",
+    "typescript": "^4.7.4",
     "vue-cli-plugin-vuetify": "^2.5.1",
     "vue-template-compiler": "^2.7.8",
     "vuetify-loader": "^1.9.2"
