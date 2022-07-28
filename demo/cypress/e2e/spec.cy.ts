@@ -1,4 +1,4 @@
-describe('empty spec', () => {
+describe('End-to-end tests', () => {
 
   before(() => {
     cy.fixture("config").then((data) => {

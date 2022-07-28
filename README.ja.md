@@ -1,6 +1,7 @@
 # ui-schema-generator
 
-[![Jest](https://github.com/yokra9/ui-schema-generator/actions/workflows/Jest.yml/badge.svg)](https://github.com/yokra9/ui-schema-generator/actions/workflows/Jest.yml)
+[![Unit tests](https://github.com/yokra9/ui-schema-generator/actions/workflows/Jest.yml/badge.svg)](https://github.com/yokra9/ui-schema-generator/actions/workflows/Jest.yml)
+[![End-to-end tests](https://github.com/yokra9/ui-schema-generator/actions/workflows/E2E.yml/badge.svg)](https://github.com/yokra9/ui-schema-generator/actions/workflows/E2E.yml)
 [![npm version](https://badge.fury.io/js/ui-schema-generator.svg)](https://badge.fury.io/js/ui-schema-generator)
 [![npm](https://img.shields.io/npm/dt/ui-schema-generator)](https://badge.fury.io/js/ui-schema-generator)
 
