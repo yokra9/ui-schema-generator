@@ -4,5 +4,8 @@ module.exports = {
   ],
   publicPath: process.env.GITHUB_PAGES === 'true'
     ? '/ui-schema-generator/dist/'
-    : '/'
+    : '/',
+  configureWebpack: {
+    devtool: 'hidden-source-map',
+  }
 }

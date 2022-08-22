@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "copyfiles dist/** ../docs && cd ../docs/dist",
+    "deploy": "copyfiles dist/* dist/**/* ../docs",
     "test": "cypress run --browser chrome --spec \"cypress/e2e/spec.cy.ts\""
   },
   "dependencies": {
