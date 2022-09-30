@@ -17,13 +17,13 @@
     "vuetify": "^2.6.10"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.18.9",
+    "@babel/eslint-parser": "^7.19.1",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
     "copyfiles": "^2.4.1",
     "cypress": "^10.3.1",
-    "eslint": "^8.20.0",
+    "eslint": "^8.24.0",
     "eslint-plugin-vue": "^9.3.0",
     "sass": "^1.54.4",
     "sass-loader": "^13.0.2",
