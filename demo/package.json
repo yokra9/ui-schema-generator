@@ -24,7 +24,7 @@
     "copyfiles": "^2.4.1",
     "cypress": "^12.11.0",
     "eslint": "^8.39.0",
-    "eslint-plugin-vue": "^9.11.0",
+    "eslint-plugin-vue": "^9.11.1",
     "sass": "^1.62.1",
     "sass-loader": "^13.2.2",
     "typescript": "^5.0.4",
