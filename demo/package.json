@@ -23,7 +23,7 @@
     "@vue/cli-service": "^5.0.8",
     "copyfiles": "^2.4.1",
     "cypress": "^12.14.0",
-    "eslint": "^8.41.0",
+    "eslint": "^8.43.0",
     "eslint-plugin-vue": "^9.11.0",
     "sass": "^1.62.1",
     "sass-loader": "^13.3.1",
