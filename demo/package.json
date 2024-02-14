@@ -14,7 +14,7 @@
     "ui-schema-generator": "../",
     "vue": "^2.7.16",
     "vue-form-json-schema": "^2.9.4",
-    "vuetify": "^2.7.1"
+    "vuetify": "^2.7.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.23.10",
