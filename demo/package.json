@@ -10,7 +10,7 @@
     "test": "cypress run --browser chrome --spec \"cypress/e2e/spec.cy.ts\""
   },
   "dependencies": {
-    "core-js": "^3.36.0",
+    "core-js": "^3.36.1",
     "ui-schema-generator": "../",
     "vue": "^2.7.16",
     "vue-form-json-schema": "^2.9.4",
