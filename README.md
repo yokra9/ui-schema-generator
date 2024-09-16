@@ -1,7 +1,7 @@
 # ui-schema-generator
 
-[!CAUTION]
-[Vue Form JSON Schema is not supported in Vue 3](https://github.com/jarvelov/vue-form-json-schema/issues/81). Vue 2 reached End of Life (EOL) on December 31st, 2023.
+> [!CAUTION]
+> [Vue Form JSON Schema is not supported in Vue 3](https://github.com/jarvelov/vue-form-json-schema/issues/81). Vue 2 reached End of Life (EOL) on December 31st, 2023.
 
 [![Unit tests](https://github.com/yokra9/ui-schema-generator/actions/workflows/Jest.yml/badge.svg)](https://github.com/yokra9/ui-schema-generator/actions/workflows/Jest.yml)
 [![End-to-end tests](https://github.com/yokra9/ui-schema-generator/actions/workflows/E2E.yml/badge.svg)](https://github.com/yokra9/ui-schema-generator/actions/workflows/E2E.yml)
