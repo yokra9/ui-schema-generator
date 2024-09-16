@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --skip-plugins eslint",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
     "deploy": "copyfiles dist/* dist/**/* ../docs",
     "test": "cypress run --browser chrome --spec \"cypress/e2e/spec.cy.ts\""
   },
@@ -17,34 +16,17 @@
     "vuetify": "^2.7.2"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.25.1",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
     "copyfiles": "^2.4.1",
     "cypress": "^13.14.2",
-    "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.27.0",
     "sass": "^1.77.8",
     "sass-loader": "^16.0.1",
     "typescript": "^5.6.2",
     "vue-cli-plugin-vuetify": "^2.5.8",
     "vue-template-compiler": "^2.7.16",
     "vuetify-loader": "^1.9.2"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
   },
   "browserslist": [
     "> 1%",
