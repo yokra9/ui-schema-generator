@@ -21,7 +21,7 @@
     "@vue/cli-service": "^5.0.8",
     "copyfiles": "^2.4.1",
     "cypress": "^13.14.2",
-    "sass": "^1.77.8",
+    "sass": "^1.79.2",
     "sass-loader": "^16.0.1",
     "typescript": "^5.6.2",
     "vue-cli-plugin-vuetify": "^2.5.8",
