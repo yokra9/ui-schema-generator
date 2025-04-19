@@ -23,7 +23,7 @@
     "cypress": "^14.3.0",
     "sass": "^1.86.3",
     "sass-loader": "^16.0.5",
-    "typescript": "^5.8.2",
+    "typescript": "^5.8.3",
     "vue-cli-plugin-vuetify": "^2.5.8",
     "vue-template-compiler": "^2.7.16",
     "vuetify-loader": "^1.9.2"
